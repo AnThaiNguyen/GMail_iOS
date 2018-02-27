@@ -78,6 +78,7 @@
                         <viewLayoutGuide key="safeArea" id="hHJ-Ys-Qqg"/>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="vFe-DO-Tbi" id="syi-kw-kT3"/>
                         <outlet property="searchDisplayController" destination="QlF-j8-UEi" id="5Zd-Tx-TSc"/>
                     </connections>
                 </viewController>

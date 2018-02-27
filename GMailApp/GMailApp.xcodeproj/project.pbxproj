@@ -7,31 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EC4FE782045F9DD002EEFFE /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4FE762045F9DC002EEFFE /* LogInVC.swift */; };
+		4EC4FE7B2045F9E2002EEFFE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4FE7A2045F9E2002EEFFE /* UserModel.swift */; };
+		4EC4FE7F2045FA04002EEFFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4FE7E2045FA04002EEFFE /* DataManager.swift */; };
+		4EC4FE822045FCEF002EEFFE /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4FE812045FCEF002EEFFE /* QueryService.swift */; };
+		4EC4FE87204604B0002EEFFE /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4FE86204604B0002EEFFE /* UIKitExtensions.swift */; };
+		4EC4FE8920460667002EEFFE /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4FE8820460667002EEFFE /* FoundationExtensions.swift */; };
+		4EC4FE9020460ECD002EEFFE /* MailBoxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4FE8F20460ECD002EEFFE /* MailBoxVC.swift */; };
 		B04D91F2204375DE00416383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D91F1204375DE00416383 /* AppDelegate.swift */; };
-		B04D91F4204375DE00416383 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D91F3204375DE00416383 /* LogInVC.swift */; };
 		B04D91F7204375DE00416383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04D91F5204375DE00416383 /* Main.storyboard */; };
 		B04D91FA204375DE00416383 /* GMailApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B04D91F8204375DE00416383 /* GMailApp.xcdatamodeld */; };
 		B04D91FC204375DE00416383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B04D91FB204375DE00416383 /* Assets.xcassets */; };
 		B04D91FF204375DE00416383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04D91FD204375DE00416383 /* LaunchScreen.storyboard */; };
 		B0B78859204377CD00FD4073 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0B78858204377CD00FD4073 /* GoogleService-Info.plist */; };
-		B0B7885B204378A000FD4073 /* MailBoxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B7885A204378A000FD4073 /* MailBoxVC.swift */; };
-		B0B788602043907200FD4073 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B7885F2043907200FD4073 /* UserModel.swift */; };
 		C7D3DE02BAF2B12D5E02BEFB /* Pods_GMailApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA79E5E0CC5C088D9332F4BB /* Pods_GMailApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EC4FE762045F9DC002EEFFE /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
+		4EC4FE7A2045F9E2002EEFFE /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4EC4FE7E2045FA04002EEFFE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4EC4FE812045FCEF002EEFFE /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
+		4EC4FE86204604B0002EEFFE /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		4EC4FE8820460667002EEFFE /* FoundationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		4EC4FE8F20460ECD002EEFFE /* MailBoxVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailBoxVC.swift; sourceTree = "<group>"; };
 		B04D91EE204375DE00416383 /* GMailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04D91F1204375DE00416383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B04D91F3204375DE00416383 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		B04D91F6204375DE00416383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B04D91F9204375DE00416383 /* GMailApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GMailApp.xcdatamodel; sourceTree = "<group>"; };
 		B04D91FB204375DE00416383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B04D91FE204375DE00416383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B04D9200204375DE00416383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0B78858204377CD00FD4073 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		B0B7885A204378A000FD4073 /* MailBoxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailBoxVC.swift; sourceTree = "<group>"; };
 		B0B7885C204386BB00FD4073 /* GMailApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GMailApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		B0B7885F2043907200FD4073 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		C2757B9B1F466B31C8F87D9A /* Pods-GMailApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMailApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GMailApp/Pods-GMailApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DA79E5E0CC5C088D9332F4BB /* Pods_GMailApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GMailApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE01E01127CBAE19A417E0EF /* Pods-GMailApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMailApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GMailApp/Pods-GMailApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +57,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EC4FE742045F9AE002EEFFE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EC4FE762045F9DC002EEFFE /* LogInVC.swift */,
+				4EC4FE8F20460ECD002EEFFE /* MailBoxVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4EC4FE752045F9AE002EEFFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EC4FE7A2045F9E2002EEFFE /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4EC4FE7D2045F9F8002EEFFE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4EC4FE7E2045FA04002EEFFE /* DataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4EC4FE802045FCCA002EEFFE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4EC4FE812045FCEF002EEFFE /* QueryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4EC4FE85204604A7002EEFFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EC4FE86204604B0002EEFFE /* UIKitExtensions.swift */,
+				4EC4FE8820460667002EEFFE /* FoundationExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B01A13F59F028F514AD8E9CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +128,11 @@
 		B04D91F0204375DE00416383 /* GMailApp */ = {
 			isa = PBXGroup;
 			children = (
+				4EC4FE85204604A7002EEFFE /* Extensions */,
+				4EC4FE802045FCCA002EEFFE /* Services */,
+				4EC4FE7D2045F9F8002EEFFE /* Managers */,
+				4EC4FE752045F9AE002EEFFE /* Models */,
+				4EC4FE742045F9AE002EEFFE /* ViewControllers */,
 				B0B78858204377CD00FD4073 /* GoogleService-Info.plist */,
 				B04D91F1204375DE00416383 /* AppDelegate.swift */,
 				B04D91F5204375DE00416383 /* Main.storyboard */,
@@ -85,10 +140,7 @@
 				B04D91FD204375DE00416383 /* LaunchScreen.storyboard */,
 				B04D9200204375DE00416383 /* Info.plist */,
 				B04D91F8204375DE00416383 /* GMailApp.xcdatamodeld */,
-				B04D91F3204375DE00416383 /* LogInVC.swift */,
-				B0B7885A204378A000FD4073 /* MailBoxVC.swift */,
 				B0B7885C204386BB00FD4073 /* GMailApp-Bridging-Header.h */,
-				B0B7885F2043907200FD4073 /* UserModel.swift */,
 			);
 			path = GMailApp;
 			sourceTree = "<group>";
@@ -214,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E1AF72849E7626D6CBA47A42 /* [CP] Copy Pods Resources */ = {
@@ -243,10 +295,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B04D91FA204375DE00416383 /* GMailApp.xcdatamodeld in Sources */,
-				B04D91F4204375DE00416383 /* LogInVC.swift in Sources */,
+				4EC4FE7F2045FA04002EEFFE /* DataManager.swift in Sources */,
 				B04D91F2204375DE00416383 /* AppDelegate.swift in Sources */,
-				B0B788602043907200FD4073 /* UserModel.swift in Sources */,
-				B0B7885B204378A000FD4073 /* MailBoxVC.swift in Sources */,
+				4EC4FE782045F9DD002EEFFE /* LogInVC.swift in Sources */,
+				4EC4FE9020460ECD002EEFFE /* MailBoxVC.swift in Sources */,
+				4EC4FE822045FCEF002EEFFE /* QueryService.swift in Sources */,
+				4EC4FE7B2045F9E2002EEFFE /* UserModel.swift in Sources */,
+				4EC4FE87204604B0002EEFFE /* UIKitExtensions.swift in Sources */,
+				4EC4FE8920460667002EEFFE /* FoundationExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
