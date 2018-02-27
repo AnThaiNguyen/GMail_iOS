@@ -12,9 +12,6 @@ import GoogleSignIn
 
 class LogInVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
-    var user_Infor : UserInformation?
-    let gmailService = GTLRGmailService()
-    
     @IBOutlet weak var signInBtn: GIDSignInButton!
     
     override func viewDidLoad() {
