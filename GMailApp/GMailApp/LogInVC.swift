@@ -25,6 +25,15 @@ class LogInVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().scopes = self.scopes
     }
     
+    /*
+     Function: sign
+     A function established by GIDSignInDelegate
+     Return:
+        Error
+     GIDGoogleUser user: which comprises
+                                        User ID, User Profile Data
+     */
+    
     // Function log in
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if error != nil {
@@ -39,7 +48,7 @@ class LogInVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
             // Nil data
             self.requestGetMailListFromGoogle((user_Infor?.userId)!)
             
-            
+            // Navigate to MailBoxVC and use the user's data to load into a tableview created in the MailBoxVC
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let mailBoxVC = storyboard.instantiateViewController(withIdentifier: "MailBox") as! MailBoxVC
             mailBoxVC.userInfo = self.user_Infor
@@ -47,6 +56,17 @@ class LogInVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         }
     }
     
+    
+    /*
+     Function: requestGetMailListFromGoogle
+     Para:
+        String uID (which is user ID returned by GoogleSignIn)
+     Works:
+        Create a query to get the user's mail list
+        Execute the query and then execute the function, getMailList
+     Note:
+     Return values form (Mail List) : [{mail ID, thread ID}]
+     */
     func requestGetMailListFromGoogle(_ uID: String){
         let query = GTLRGmailQuery_UsersMessagesList.query(withUserId: "me")
         self.gmailService.executeQuery(query,
@@ -55,6 +75,18 @@ class LogInVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         
     }
     
+    /*
+     Function: getMailList
+     Para:
+        GTLRGmailService Ticket is like a key for access to the Gmail service
+        GTLRGmail_ListMessagesResponse messagesRespone is the list of emails
+        NSError error is to return a error from the service if it happens
+     Works:
+        Process the response from the Gmail service and parse that mail list into the variable user_Info
+        From the mail list, get each mail ID and request to the service to get that mail data
+     Note:
+        With Gmail, the service doesn't send back all email data, the dev has to send query to request a mail detail through using its mail ID
+     */
     @objc func getMailList(ticket: GTLRGmailService,
                      finishedWithObject messagesResponse : GTLRGmail_ListMessagesResponse,
                      error: NSError!){
@@ -70,11 +102,15 @@ class LogInVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
             }
         }
         
+        // A loop to send query to the service for each mail
         for item in (self.user_Infor?.mailList)! {
             getOneEmail_FromMailBox(item.mID)
         }
     }
-
+    
+    /*
+     Function: getOneEmail_FromMailBox
+     */
     func getOneEmail_FromMailBox(_ mailID: String){
         let query = GTLRGmailQuery_UsersMessagesGet.query(withUserId: "me", identifier: mailID)
         gmailService.executeQuery(query,
@@ -82,6 +118,12 @@ class LogInVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                                   didFinish: #selector(self.parsingMailData(ticket:finishedWithObject:error:)))
     }
     
+    /*
+     Function: getOneEmail_FromMailBox
+     Work:
+        Get mailResponse's headers in its payload
+        Spread all header to get the header's name and value
+     */
     @objc func parsingMailData(ticket : GTLRServiceTicket,
                                finishedWithObject mailResponse : GTLRGmail_Message,
                                error : NSError?){
@@ -93,16 +135,15 @@ class LogInVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                 for header in reviceMail! {
                     self.parserMailHeaders(header: String(describing: header))
                 }
-//                DispatchQueue.main.async {
-//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                    let mailBoxVC = storyboard.instantiateViewController(withIdentifier: "MailBox") as! MailBoxVC
-//                    mailBoxVC.userInfo = self.user_Infor
-//                    self.present(mailBoxVC, animated: false, completion: nil)
-//                }
             }
         }
     }
     
+    /*
+     Function: parserMailHeaders
+     Work:
+        Get value of both tag<name> and <value> in the header string
+     */
     func parserMailHeaders(header: String) -> (name:String, value:String){
         var data = String(header[header.index(of: "{")!..<header.index(of: "}")!])
         // Remove special characters
@@ -122,6 +163,11 @@ class LogInVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         return (name, value)
     }
     
+    /*
+     Function: showAlert
+     Work:
+        Get error string returned by the google service and present it as a alert
+     */
     func showAlert(title : String, message: String) {
         let alert = UIAlertController(
             title: title,
