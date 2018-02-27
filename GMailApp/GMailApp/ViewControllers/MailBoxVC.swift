@@ -40,6 +40,7 @@ class MailBoxVC: UIViewController {
     }
     
     private func loadHeader(completionHandler: @escaping (() -> ())) {
+        count += 1
         if count >= dataManager.user.mailList.count {
             completionHandler()
         } else {
